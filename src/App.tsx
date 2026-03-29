@@ -5,6 +5,7 @@ import RoadmapDisplay from './components/RoadmapDisplay';
 import { generateRoadmap } from './services/gemini';
 import { Loader2, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function App() {
   const [roadmap, setRoadmap] = useState<LearningRoadmap | null>(null);
@@ -90,6 +91,7 @@ export default function App() {
           <button onClick={() => setError(null)} className="ml-4 text-slate-400 hover:text-slate-900">✕</button>
         </div>
       )}
+      <SpeedInsights />
     </div>
   );
 }
